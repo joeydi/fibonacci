@@ -1,16 +1,24 @@
 body {
+    padding: 40px 10px;
     background: url('images/honeycomb-bg.png');
     color: #383838;
     font-family: sans-serif;
     font-size: 20px;
 }
 
-h1 {
-    font-size: 30px;
-    margin-bottom: 1em;
+#header {
     text-align: center;
 }
 
+#header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#header h2 {
+    font-size: 72px;
+    margin-bottom: 1em;
+}
 p {
     margin-bottom: 1em;
 }
@@ -55,12 +63,17 @@ img.center {
 
 #golden-rectangle {
     border: 10px solid white;
+    border-left-width: 9px;
     height: 340px; /* height of largest */ 
     margin: 0 auto;
     width:  550px; /* next fibonacci number :) */
 }
 
-/* golden-section */
+/* this 1px div 'blocks' non-floated divs */
+#block {width: 1px; height: 340px; background: #fff;}
+
+/* golden-sections */
+img.golden-section {display: block;}
 img#section-1 {height: 340px; width: 340px;}
 img#section-2 {height: 210px; width: 210px;}
 img#section-3 {height: 130px; width: 130px;}
