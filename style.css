@@ -69,9 +69,6 @@ img.center {
     width:  550px; /* next fibonacci number :) */
 }
 
-/* this 1px div 'blocks' non-floated divs */
-#block {width: 1px; height: 340px; background: #fff;}
-
 /* golden-sections */
 img.golden-section {display: block;}
 img#section-1 {height: 340px; width: 340px;}
