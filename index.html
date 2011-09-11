@@ -1,57 +1,46 @@
+<!DOCTYPE html >
 <html>
-<head>
-<title>Fibonacci Brainteaser</title>
-<link rel="stylesheet" type="text/css" href="fibonacci.css" />
-<head>
+    <head>
+        <title>Fibonacci Brainteaser</title>
+        
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="http://okay-plus.com/workspace/js/behavior.js" type="text/javascript" charset="utf-8"></script> 
+    <head>
+    <body>
+        <div class="container">
+            <h1>Fibonacci Brainteaser for HTML and CSS</h1>
+            <p>Can you make images s1 - s9 into a <a target="blank" href="http://en.wikipedia.org/wiki/File:Fibonacci_spiral_34.svg">Fibonacci spiral</a> using only HTML and CSS?</p>
+            <div id="rules">
+                <p>Rules</p>
+                <ul>
+                    <li>You cannot add HTML.</li>
+                    <li>You can change the order of the images in HTML.</li>
+                    <li>You can add styles. (e.g. padding, margin, z-index, float)</li>
+                    <li>You cannot use absolute positioning.</li>
+                    <li>You cannot use tables. (Duh.)</li>
+                </ul>
+            </div>
 
-<body>
+            <div id="download">
+                <p>Download and try it yourself.</p>
+                <a href="fibonacci_puzzle.zip"><img class="center" src="images/heart.png" alt="" /></a>
+                <p>It might be impossible.</p>
+            </div>
 
-
-<!--
-<div id="wrapper">
--->
-
-<h1>Fibonacci Brainteaser for HTML and CSS</h1>
-<p>Can you make images s1 - s9 into a <a target="blank" href="http://en.wikipedia.org/wiki/File:Fibonacci_spiral_34.svg">Fibonacci spiral</a> using only HTML and CSS?</p>
-
-
-<!-- --- RULES --- -- -->
-<div id="rules">
-	<p>Rules</p>
-	<ol>
-		<li>You cannot add HTML.</li>
-		<li>You can change the order of the images in HTML.</li>
-		<li>You can add styles. (e.g. padding, margin, z-index, float)</li>
-		<li>You cannot use absolute positioning.</li>
-		<li>You cannot use tables. (Duh.)</li>
-	</ol>
-</div>
-<!-- -- --- ----- --- -->
-
-
-<!-- --- DOWNLOAD --- -- -->
-<div id="download">
-	<p>Download and try it yourself.</p>
-	<a href="fibonacci_puzzle.zip"><img class="center" src="images/heart.png" alt="" /></a>
-	<p>It might be impossible.</p>
-</div>
-<!-- --- ----------- --- -->
-
-
-
-<div id="container">
-
-<img class="s1" src="images/object1.jpg" alt="" />
-<img class="s2" src="images/object2.jpg" alt="" />
-<img class="s3" src="images/object3.jpg" alt="" />
-<img class="s4" src="images/object4.jpg" alt="" />
-<img class="s5" src="images/object5.jpg" alt="" />
-<img class="s6" src="images/object6.jpg" alt="" />
-<img class="s7" src="images/object7.jpg" alt="" />
-<img class="s8" src="images/object8.jpg" alt="" />
-<img class="s9" src="images/object9.jpg" alt="" />
-
-</div>
-
-</body>
+            <div id="golden-rectangle">
+                <img id="section-1" class="golden-section" src="images/section-1.jpg" alt="section-1" />
+                <img id="section-2" class="golden-section" src="images/section-2.jpg" alt="section-2" />
+                <img id="section-3" class="golden-section" src="images/section-3.jpg" alt="section-3" />
+                <img id="section-4" class="golden-section" src="images/section-4.jpg" alt="section-4" />
+                <img id="section-5" class="golden-section" src="images/section-5.jpg" alt="section-5" />
+                <img id="section-6" class="golden-section" src="images/section-6.jpg" alt="section-6" />
+                <img id="section-7" class="golden-section" src="images/section-7.jpg" alt="section-7" />
+                <img id="section-8" class="golden-section" src="images/section-8.jpg" alt="section-8" />
+                <img id="section-9" class="golden-section" src="images/section-9.jpg" alt="section-9" />
+            </div>
+        </div>
+    </body>
 </html>
