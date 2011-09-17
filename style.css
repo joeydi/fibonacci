@@ -11,14 +11,19 @@ body {
 }
 
 #header h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 10px;
 }
 
 #header h2 {
     font-size: 72px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: bello-pro;
+}
+
 p {
     margin-bottom: 1em;
 }
@@ -45,10 +50,12 @@ li {
 }
 
 #rules, #download {
+    width: 200px;
+    height: 300px;
+    margin: 0 0 0 15px; 
     border: 10px solid white;
-    float: left;height: 300px;
+    float: left;
     padding: 20px;
-    margin: 0 0 0 15px;  width: 200px;
 }
 
 #rules {    float: left }
@@ -62,11 +69,10 @@ img.center {
 }
 
 #golden-rectangle {
-    border: 10px solid white;
-    border-left-width: 9px;
+    width:  550px; /* next fibonacci number :) */
     height: 340px; /* height of largest */ 
     margin: 0 auto;
-    width:  550px; /* next fibonacci number :) */
+    border: 10px solid white;
 }
 
 /* golden-sections */
