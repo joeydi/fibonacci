@@ -2,53 +2,97 @@
 <html>
     <head>
         <title>Fibonacci Brainteaser</title>
-        
+
         <link rel="stylesheet" type="text/css" href="reset.css" />
         <link rel="stylesheet" type="text/css" href="style.css" />
-        
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
-        <script src="http://okay-plus.com/workspace/js/behavior.js" type="text/javascript" charset="utf-8"></script> 
+
+        <link href='http://fonts.googleapis.com/css?family=Arapey:400italic,400' rel='stylesheet' type='text/css' />
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script src="http://okay-plus.com/workspace/js/behavior.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://use.typekit.com/tqt4yxq.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-        
-    <head>
+
+    </head>
     <body>
-        <div class="container">
-            <div id="header">
-                <h1>The Fibonacci Sequence</h1>
-                <h2>Easy As 1 1 2 3</h2>
-                <p>Arrange the nine golden sections into a <a href="http://en.wikipedia.org/wiki/File:Fibonacci_spiral_34.svg">Fibonacci spiral.</a></p>
-                <p>Use the controls on the left to adjust the order and alignment of each section.</p>
-                <p>Fame and fortune await.</p>
-            </div>
-            <div id="rules">
-                <p>Rules</p>
-                <ul>
-                    <li>You cannot add HTML.</li>
-                    <li>You can change the order of the images in HTML.</li>
-                    <li>You can add styles. (e.g. padding, margin, z-index, float)</li>
-                    <li>You cannot use absolute positioning.</li>
-                    <li>You cannot use tables. (Duh.)</li>
-                </ul>
+        <div class="wrapper">
+
+            <div class="column_sm">
+
+                <div id="logo">
+                    <img id="spiral" src="images/spiral_v2.png" alt="fibonacci spiral" />
+                </div>
+
+                <div id="controller" class="signs">
+                    <h2 class="string1">Controls</h2>
+                    <ul class="rollup1" class="controls">
+                        <li><a href="">thing 7</a></li>
+                        <li><a href="">thing 6</a></li>
+                        <li><a href="">thing 1</a></li>
+                        <li><a href="">thing 2</a></li>
+                        <li><a href="">thing 3</a></li>
+                        <li><a href="">thing 4</a></li>
+                        <li><a href="">thing 5</a></li>
+                    </ul>
+                </div>
+
+                <div id="rules" class="signs">
+                    <h2 class="string2">Rules</h2>
+                    <ol class="rollup2">
+                        <li>Use the controls on the left to adjust the order and alignment of each section.</li>
+                        <li>You may change the order of things in HTML.</li>
+                        <li>You may float each thing to the left or to the right.</li>
+                        <li>Make a spiral.</li>
+                        <li>Fame and fortune await.</li>
+                    </ol>
+                </div>
+
+                <div id="more" class="signs">
+                    <h2 class="string3">More</h2>
+                    <ul class="rollup3">
+                        <li><a href="fibonacci_puzzle.zip" alt="download">Download</a> and try it yourself.</li>
+                        <li>Arrange the nine golden sections into a <a href="http://en.wikipedia.org/wiki/File:Fibonacci_spiral_34.svg">Fibonacci spiral.</a></li>
+                        <li>It might be impossible.</li>
+                    </ul>
+                </div>
+
+                <script type="text/javascript">
+                    $(".string1").click(function () {
+                        $(".rollup1").toggle("fold", {}, 1000)
+                    })
+                    $(".string2").click(function () {
+                        $(".rollup2").toggle("fold", {}, 1000)
+                    })
+                    $(".string3").click(function () {
+                        $(".rollup3").toggle("fold", {}, 1000)
+                    })
+
+                </script>
+
             </div>
 
-            <div id="download">
-                <p>Download and try it yourself.</p>
-                <a href="fibonacci_puzzle.zip"><img class="center" src="images/heart.png" alt="" /></a>
-                <p>It might be impossible.</p>
+            <div class="column_lg">
+
+                <div id="header">
+                    <h1>The Fibonacci Sequence</h1>
+                    <h2>Easy As 1 1 2 3</h2>
+                </div>
+
+                <div id="golden-rectangle" class="sandbox">
+                    <div id="section-1" class="golden-section"><p>1.</p></div>
+                    <div id="section-2" class="golden-section"><p>2.</p></div>
+                    <div id="section-3" class="golden-section"><p>3.</p></div>
+                    <div id="section-4" class="golden-section"><p>4.</p></div>
+                    <div id="section-5" class="golden-section"><p>5.</p></div>
+                    <div id="section-6" class="golden-section"><p>6.</p></div>
+                    <div id="section-7" class="golden-section"><p>7.</p></div>
+                    <div id="section-8" class="golden-section"><p>8.</p></div>
+                    <div id="section-9" class="golden-section"><p>9.</p></div>
+                </div>
+
             </div>
 
-            <div id="golden-rectangle">
-                <img id="section-1" class="golden-section" src="images/section-1.jpg" alt="section-1" />
-                <img id="section-2" class="golden-section" src="images/section-2.jpg" alt="section-2" />
-                <img id="section-3" class="golden-section" src="images/section-3.jpg" alt="section-3" />
-                <img id="section-4" class="golden-section" src="images/section-4.jpg" alt="section-4" />
-                <img id="section-5" class="golden-section" src="images/section-5.jpg" alt="section-5" />
-                <img id="section-6" class="golden-section" src="images/section-6.jpg" alt="section-6" />
-                <img id="section-7" class="golden-section" src="images/section-7.jpg" alt="section-7" />
-                <img id="section-8" class="golden-section" src="images/section-8.jpg" alt="section-8" />
-                <img id="section-9" class="golden-section" src="images/section-9.jpg" alt="section-9" />
-            </div>
         </div>
     </body>
 </html>
