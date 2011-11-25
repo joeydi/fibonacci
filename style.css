@@ -25,8 +25,9 @@ body {
 
 
 #header {
-    height: 158px; /* same as height of logo */
+    height: 158px; /* same as height of #logo */
     margin: 0 0 35px;
+    width: 550px; /* same width as #golden-rectangle */
 }
 
 #footer {
@@ -73,14 +74,6 @@ li {
 ul li {
     border-bottom: 1px dashed #9fccea;
 }
-
-
-img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 a:link, a:visited, a:hover, a:active {
     color: #e1e4e6;
@@ -204,7 +197,6 @@ a.floatSide:hover {
 
 #golden-rectangle {
     height: 340px; /* height of largest */
-    margin: 0 auto;
     width:  550px; /* next fibonacci number :) */
 }
 
