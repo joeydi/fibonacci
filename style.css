@@ -15,19 +15,18 @@ body {
 
 .column_lg {
     float: right;
-    width: 65%;
+    width: 554px; /* goldenRectangle */
 }
 
 .column_sm {
     float: left;
-    width: 30%;
+    width: 306px; /* leave 40px gutter */
 }
-
 
 #header {
     height: 158px; /* same as height of #logo */
     margin: 0 0 35px;
-    width: 550px; /* same width as #golden-rectangle */
+    width: 550px; /* same width as #goldenRectangle */
 }
 
 #footer {
@@ -195,7 +194,7 @@ a.floatSide:hover {
     box-shadow: 1px 1px 15px 3px rgba(100, 102, 102, 1);
 }
 
-#golden-rectangle {
+#goldenRectangle {
     height: 340px; /* height of largest */
     width:  550px; /* next fibonacci number :) */
 }
@@ -239,9 +238,6 @@ a.floatSide:hover {
 #section-3 {height: 18px; width: 18px;}
 #section-2 {height: 8px; width: 8px;}
 #section-1 {height: 8px; width: 8px;}
-
-
-
 
 
 /* images etc. */
