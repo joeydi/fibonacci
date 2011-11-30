@@ -190,6 +190,7 @@ li.tmpPlaceholder {
     height: 340px; /* height of largest */
     width:  550px; /* next fibonacci number :) */
 
+    background: url('images/stripe.png') repeat;
     border: 1px solid #9fccea;
     color: #465966;
         -webkit-border-radius: 2px;
