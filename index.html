@@ -9,7 +9,6 @@
         <link href='http://fonts.googleapis.com/css?family=Arapey:400italic,400' rel='stylesheet' type='text/css' />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-        <script src="http://okay-plus.com/workspace/js/behavior.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://use.typekit.com/tqt4yxq.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<script type="text/javascript" src="js/android_fix_sortable.js"></script>
@@ -68,7 +67,7 @@
                     <p>Use the controls on the left to adjust the order and alignment of each square. Make the squares go 'round like the beloved Fibonacci spiral.</p>
                 </div>
 
-                <div id="goldenRectangle">
+                <div id="goldenRectangle" class="clearfix">
                     <ul id="justSomeHTML" class="rollup1 controls">
                         <li id="section-9"><span class="hide">Box no. </span>9</li>
                         <li id="section-8"><span class="hide">Box no. </span>8</li>
@@ -84,111 +83,12 @@
 
             </div>
 
-            <div class="clearfix"></div>
-
             <div id="footer" class="clearfix">
-            by Joey and Emma
-            <span class="floatRight">2011</span>
+                by Joey and Emma
+                <span id="date">2011</span>
             </div>
 
         </div>
-
-
-<!--
-
-Read about cloning elements that aren't attached to the DOM (like the items we sorted). http://api.jquery.com/clone/
-Example: When using .clone() to clone a collection of elements that are not attached to the DOM, their order when inserted into the DOM is not guaranteed. However, it may be possible to preserve sort order with a workaround, as demonstrated:
-
--->
-
-
-
-<!-- rollup script -->
-<script type="text/javascript">
-    $( ".string1" ).click(function () {
-        $( ".rollup1" ).toggle("fold", {}, 1000)
-        })
-    $( ".string2" ).click(function () {
-        $( ".rollup2" ).toggle("fold", {}, 1000)
-        })
-    $( ".string3" ).click(function () {
-        $( ".rollup3" ).toggle("fold", {}, 1000)
-        })
-</script>
-
-
-<!-- sortable, alert after sorting -->
-<script type="text/javascript">
-$(document).ready(function() {
-    $( "#justSomeHTML" )
-        .sortable({
-            placeholder: 'tmpPlaceholder',
-            forcePlaceholderSize: true,
-
-            helper: function(e, element) {
-                return $(element).clone().addClass('tmpHelper');
-                },
-
-            update : function(e, ui) {
-                $( "#goldenRectangle" )
-                    .empty()
-                    .append(
-                         $('#justSomeHTML')
-                            .clone()
-                            .children('a')
-                            .end()
-                        );
-
-                },
-            })
-        .disableSelection()
-        })
-</script>
-
-
-
-
-
-<!-- cloning with workaround for elements not attached to DOM -->
-<script type="text/javascript">
-// correct way to approach where order is maintained
-    $( "#////////goldenRectangle" )
-          .append(
-              $('#justSomeHTML')
-                    .clone()
-                    .children('a')
-                    .prepend('bar - ')
-                    .end()
-                );
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<!-- backup -->
-
-
-<!-- sortable, placeholder -->
-<script type="text/javascript">
-$(document).ready(function() {
-    $( "#///////////justSomeHTML" )
-        .sortable({
-            placeholder: 'tmpPlaceholder',
-        })
-    })
-</script>
-
-
-
-
-
-
+        <script src="js/fibonacci.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>

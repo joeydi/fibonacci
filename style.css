@@ -45,6 +45,10 @@ body {
     width: 100%;
 }
 
+#footer #date {
+    float: right;
+}
+
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
