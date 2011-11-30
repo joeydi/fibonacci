@@ -158,6 +158,7 @@ a:hover, a:active {
 /* in a list */
 
 #justSomeHTML li {
+    border: 1px solid #E1E4E6;
     border-bottom: 1px dashed #9fccea;
     border-radius: 2px;
     -moz-border-radius: 2px;
