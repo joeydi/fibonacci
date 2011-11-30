@@ -27,6 +27,8 @@ body {
     height: 158px; /* same as height of #logo */
     margin: 0 0 35px;
     width: 550px; /* same width as #goldenRectangle */
+    text-shadow: 1px 1px 4px #898B8C;
+    filter: dropshadow(color=#898B8C, offx=1, offy=1);
 }
 
 #footer {
@@ -67,17 +69,23 @@ ul, ol {
 }
 
 li {
-    padding: 5px 0;
-}
-
-ul li {
     border-bottom: 1px dashed #9fccea;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 5px 2px;
 }
 
-ul li:hover {
+li:hover {
 	background-color: rgba(159,204,234,.8);
-	cursor: ns-resize;
 }
+
+#justSomeHTML li:hover {
+    border: 1px solid #9fccea;
+    cursor: ns-resize;
+}
+
+
 
 a:link, a:visited, a:hover, a:active {
     color: #e1e4e6;
@@ -91,6 +99,10 @@ a:hover, a:active {
     text-decoration: none;
 }
 
+li.tmpPlaceholder {
+    background: url('images/stripe.png') repeat;
+    background-color: #9fccea;
+}
 
 /* sidebar stuff ("signs") */
 
@@ -155,8 +167,10 @@ a:hover, a:active {
 /* drag and drop controls */
 /* @joey - need your magic here! */
 
+
+
 /* order of elements */
-a.order {
+/* a.order {
     border: none;
     color: #465966;
     cursor: ns-resize;
@@ -168,6 +182,11 @@ a.order:hover {
     border: none;
     text-decoration: none;
 }
+
+*/
+
+
+
 
 /* float on left or right */
 a.floatSide {
@@ -204,7 +223,7 @@ a.floatSide:hover {
 }
 
 /* golden-sections */
-.golden-section {
+#goldenRectangle > div, #goldenRectangle > li {
     background-color: #e1e4e6;
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
