@@ -15,18 +15,20 @@ body {
 
 .column_lg {
     float: right;
-    width: 65%;
+    width: 554px; /* goldenRectangle */
 }
 
 .column_sm {
     float: left;
-    width: 30%;
+    width: 306px; /* leave 40px gutter */
 }
 
-
 #header {
-    height: 158px; /* same as height of logo */
+    height: 158px; /* same as height of #logo */
     margin: 0 0 35px;
+    width: 550px; /* same width as #goldenRectangle */
+    text-shadow: 1px 1px 4px #898B8C;
+    filter: dropshadow(color=#898B8C, offx=1, offy=1);
 }
 
 #footer {
@@ -54,7 +56,6 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-
 p {
     margin-bottom: 1em;
 }
@@ -63,24 +64,15 @@ em {
     font-style: italic;
 }
 
-ul, ol {
-}
+ul, ol {}
 
 li {
-    padding: 5px 0;
-}
-
-ul li {
     border-bottom: 1px dashed #9fccea;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 5px 2px;
 }
-
-
-img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 a:link, a:visited, a:hover, a:active {
     color: #e1e4e6;
@@ -139,13 +131,17 @@ a:hover, a:active {
 }
 
 /* mix it up! */
+
+#controls {
+}
+
 #rules {
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
     translatex(-2px);
 }
 
-#controls, #more {
+#more {
     -webkit-transform: rotate(2deg);
     -moz-transform: rotate(2deg);
     translatex(2px);
@@ -155,43 +151,45 @@ a:hover, a:active {
     display: none;
 }
 
-/* drag and drop controls */
-/* @joey - need your magic here! */
 
-/* order of elements */
-a.order {
-    border: none;
-    color: #465966;
+
+
+
+/* in a list */
+
+#justSomeHTML li {
+    border-bottom: 1px dashed #9fccea;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 5px 2px;
+}
+
+
+
+#justSomeHTML li:hover {
+    background-color: rgba(159,204,234,.8);
+    border: 1px solid #9fccea;
     cursor: ns-resize;
-    display: inline-block;
-    text-decoration: none;
 }
 
-a.order:hover {
-    background-color: #ecec91;
-    border: none;
-    text-decoration: none;
+
+
+li.tmpPlaceholder {
+    background: url('images/stripe.png') repeat;
+    background-color: #9fccea;
 }
 
-/* float on left or right */
-a.floatSide {
-    cursor: ew-resize;
-    float: right;
-    font-size: .85em;
-    font-style: italic;
-    text-align: right;
-}
-
-a.floatSide:hover {
-    background-color: #ecec91;
-    border: none;
-    text-decoration: none;
-}
-
-/* main stuff ("sandbox") */
 
 
-.sandbox {
+
+/* in boxes */
+
+
+#goldenRectangle {
+    height: 340px; /* height of largest */
+    width:  550px; /* next fibonacci number :) */
+
     border: 1px solid #9fccea;
     color: #465966;
         -webkit-border-radius: 2px;
@@ -202,14 +200,7 @@ a.floatSide:hover {
     box-shadow: 1px 1px 15px 3px rgba(100, 102, 102, 1);
 }
 
-#golden-rectangle {
-    height: 340px; /* height of largest */
-    margin: 0 auto;
-    width:  550px; /* next fibonacci number :) */
-}
-
-/* golden-sections */
-.golden-section {
+#goldenRectangle > ul#justSomeHTML > li {
     background-color: #e1e4e6;
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
@@ -219,37 +210,53 @@ a.floatSide:hover {
         -moz-box-shadow: 1px 1px 15px 3px rgba(100, 102, 102, 1);
     display: block;
     float: left;
+    margin: 0;
 }
 
 
-#section-7 > p, #section-8 > p, #section-9 > p {
+
+
+#goldenRectangle > ul#justSomeHTML > li > span.hide {display: none;}
+
+#goldenRectangle > ul#justSomeHTML > #section-7,
+#goldenRectangle > ul#justSomeHTML > #section-8,
+#goldenRectangle > ul#justSomeHTML > #section-9 {
     font-size: .9em; padding: 6px;
 }
 
-#section-5 > p, #section-6 > p {
+#goldenRectangle > ul#justSomeHTML > #section-5,
+#goldenRectangle > ul#justSomeHTML > #section-6 {
     font-size: .7em; padding: 2px;
 }
 
-#section-4 > p, #section-3 > p {
+#goldenRectangle > ul#justSomeHTML >#section-4,
+#goldenRectangle > ul#justSomeHTML > #section-3 {
     font-size: .5em; padding: 1px;
 }
 
-#section-2 > p, #section-1 > p {
+#goldenRectangle > ul#justSomeHTML > #section-2,
+#goldenRectangle > ul#justSomeHTML > #section-1 {
     font-size: .3em; padding: 0px;
 }
 
-#section-9 {height: 338px; width: 338px;}
-#section-8 {height: 208px; width: 208px;}
-#section-7 {height: 128px; width: 128px;}
-#section-6 {height: 78px; width: 78px;}
-#section-5 {height: 48px; width: 48px;}
-#section-4 {height: 28px; width: 28px;}
-#section-3 {height: 18px; width: 18px;}
-#section-2 {height: 8px; width: 8px;}
-#section-1 {height: 8px; width: 8px;}
+#goldenRectangle > ul#justSomeHTML > li#section-9 {height: 338px; padding: 0; width: 338px;}
+#goldenRectangle > ul#justSomeHTML > li#section-8 {height: 208px; padding: 0; width: 208px;}
+#goldenRectangle > ul#justSomeHTML > li#section-7 {height: 128px; padding: 0; width: 128px;}
+#goldenRectangle > ul#justSomeHTML > li#section-6 {height: 78px; padding: 0; width: 78px;}
+#goldenRectangle > ul#justSomeHTML > li#section-5 {height: 48px; padding: 0; width: 48px;}
+#goldenRectangle > ul#justSomeHTML > li#section-4 {height: 28px; padding: 0; width: 28px;}
+#goldenRectangle > ul#justSomeHTML > li#section-3 {height: 18px; padding: 0; width: 18px;}
+#goldenRectangle > ul#justSomeHTML > li#section-2 {height: 8px; padding: 0; width: 8px;}
+#goldenRectangle > ul#justSomeHTML > li#section-1 {height: 8px; padding: 0; width: 8px;}
 
 
 
+
+
+/* float right */
+/*
+input[type=radio]:checked {float: right;}
+*/
 
 
 /* images etc. */

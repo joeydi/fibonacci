@@ -7,19 +7,15 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
 
         <link href='http://fonts.googleapis.com/css?family=Arapey:400italic,400' rel='stylesheet' type='text/css' />
-
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <script src="http://okay-plus.com/workspace/js/behavior.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://use.typekit.com/tqt4yxq.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+		<script type="text/javascript" src="js/android_fix_sortable.js"></script>
     </head>
     <body>
         <div class="wrapper">
-
-
-
 
             <div class="column_sm">
 
@@ -27,18 +23,18 @@
                     <img id="spiral" src="images/spiral_v2.png" alt="fibonacci spiral" />
                 </div>
 
-                <div id="controller" class="signs">
+                <div id="controls" class="signs">
                     <h2 class="string1">Controls</h2>
-                    <ul class="rollup1 controls">
-                        <li><a href="" class="order">Box no. 9</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 8</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 7</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 6</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 5</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 4</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 3</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 2</a><a href="" class="floatSide">(left)</a></li>
-                        <li><a href="" class="order">Box no. 1</a><a href="" class="floatSide">(left)</a></li>
+                    <ul id="justSomeHTML" class="rollup1 controls">
+                        <li id="section-9"><span class="hide">Box no. </span>9</li>
+                        <li id="section-8"><span class="hide">Box no. </span>8</li>
+                        <li id="section-7"><span class="hide">Box no. </span>7</li>
+                        <li id="section-6"><span class="hide">Box no. </span>6</li>
+                        <li id="section-5"><span class="hide">Box no. </span>5</li>
+                        <li id="section-4"><span class="hide">Box no. </span>4</li>
+                        <li id="section-3"><span class="hide">Box no. </span>3</li>
+                        <li id="section-2"><span class="hide">Box no. </span>2</li>
+                        <li id="section-1"><span class="hide">Box no. </span>1</li>
                     </ul>
                 </div>
 
@@ -61,39 +57,29 @@
                     </ul>
                 </div>
 
-                <script type="text/javascript">
-                    $(".string1").click(function () {
-                        $(".rollup1").toggle("fold", {}, 1000)
-                    })
-                    $(".string2").click(function () {
-                        $(".rollup2").toggle("fold", {}, 1000)
-                    })
-                    $(".string3").click(function () {
-                        $(".rollup3").toggle("fold", {}, 1000)
-                    })
-                </script>
 
             </div>
 
             <div class="column_lg">
 
                 <div id="header">
-                    <h1>The Fibonacci Sequence</h1>
+                    <h1>Fibonacci Brainteaser</h1>
                     <h2>Easy As 1 1 2 3</h2>
-                    <p>Use the controls on the left to adjust the order and alignment of each square. Make the squares go 'round like the famous Fibonacci spiral.</p>
+                    <p>Use the controls on the left to adjust the order and alignment of each square. Make the squares go 'round like the beloved Fibonacci spiral.</p>
                 </div>
 
-                <div id="golden-rectangle" class="sandbox">
-                    <div id="section-9" class="golden-section floatLeft"><p>9.</p></div>
-                    <div id="section-8" class="golden-section floatLeft"><p>8.</p></div>
-                    <div id="section-7" class="golden-section floatLeft"><p>7.</p></div>
-                    <div id="section-6" class="golden-section floatLeft"><p>6.</p></div>
-                    <div id="section-5" class="golden-section floatLeft"><p>5.</p></div>
-                    <div id="section-4" class="golden-section floatLeft"><p>4.</p></div>
-                    <div id="section-3" class="golden-section floatLeft"><p>3.</p></div>
-                    <div id="section-2" class="golden-section floatLeft"><p>2.</p></div>
-                    <div id="section-1" class="golden-section floatLeft"><p>1.</p></div>
-                    <div class="clearfix"></div>
+                <div id="goldenRectangle">
+                    <ul id="justSomeHTML" class="rollup1 controls">
+                        <li id="section-9"><span class="hide">Box no. </span>9</li>
+                        <li id="section-8"><span class="hide">Box no. </span>8</li>
+                        <li id="section-7"><span class="hide">Box no. </span>7</li>
+                        <li id="section-6"><span class="hide">Box no. </span>6</li>
+                        <li id="section-5"><span class="hide">Box no. </span>5</li>
+                        <li id="section-4"><span class="hide">Box no. </span>4</li>
+                        <li id="section-3"><span class="hide">Box no. </span>3</li>
+                        <li id="section-2"><span class="hide">Box no. </span>2</li>
+                        <li id="section-1"><span class="hide">Box no. </span>1</li>
+                    </ul>
                 </div>
 
             </div>
@@ -106,5 +92,103 @@
             </div>
 
         </div>
+
+
+<!--
+
+Read about cloning elements that aren't attached to the DOM (like the items we sorted). http://api.jquery.com/clone/
+Example: When using .clone() to clone a collection of elements that are not attached to the DOM, their order when inserted into the DOM is not guaranteed. However, it may be possible to preserve sort order with a workaround, as demonstrated:
+
+-->
+
+
+
+<!-- rollup script -->
+<script type="text/javascript">
+    $( ".string1" ).click(function () {
+        $( ".rollup1" ).toggle("fold", {}, 1000)
+        })
+    $( ".string2" ).click(function () {
+        $( ".rollup2" ).toggle("fold", {}, 1000)
+        })
+    $( ".string3" ).click(function () {
+        $( ".rollup3" ).toggle("fold", {}, 1000)
+        })
+</script>
+
+
+<!-- sortable, alert after sorting -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $( "#justSomeHTML" )
+        .sortable({
+            placeholder: 'tmpPlaceholder',
+            forcePlaceholderSize: true,
+
+            helper: function(e, element) {
+                return $(element).clone().addClass('tmpHelper');
+                },
+
+            update : function(e, ui) {
+                $( "#goldenRectangle" )
+                    .empty()
+                    .append(
+                         $('#justSomeHTML')
+                            .clone()
+                            .children('a')
+                            .end()
+                        );
+
+                },
+            })
+        .disableSelection()
+        })
+</script>
+
+
+
+
+
+<!-- cloning with workaround for elements not attached to DOM -->
+<script type="text/javascript">
+// correct way to approach where order is maintained
+    $( "#////////goldenRectangle" )
+          .append(
+              $('#justSomeHTML')
+                    .clone()
+                    .children('a')
+                    .prepend('bar - ')
+                    .end()
+                );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- backup -->
+
+
+<!-- sortable, placeholder -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $( "#///////////justSomeHTML" )
+        .sortable({
+            placeholder: 'tmpPlaceholder',
+        })
+    })
+</script>
+
+
+
+
+
+
     </body>
 </html>
