@@ -24,7 +24,7 @@
                 <div id="controls" class="signs">
                     <h2 class="string1">Controls</h2>
                     <ul id="justSomeHTML" class="rollup1 controls">
-                        <li id="section-9"><span class="hide">Box no. </span>9</li>
+                        <li id="section-9"><span class="hide">Box no. </span>9 <div class="slider"><div class="knob"></div><div class="targetLeft"></div><div class="targetRight"></div></div></li>
                         <li id="section-8"><span class="hide">Box no. </span>8</li>
                         <li id="section-7"><span class="hide">Box no. </span>7</li>
                         <li id="section-6"><span class="hide">Box no. </span>6</li>
@@ -109,6 +109,7 @@
 $(document).ready(function() {
     $( "#justSomeHTML" )
         .sortable({
+            cancel: '.slider',
             placeholder: 'tmpPlaceholder',
             forcePlaceholderSize: true,
             helper: function(e, element) {
@@ -128,6 +129,31 @@ $(document).ready(function() {
         .disableSelection()
         })
 </script>
+
+
+<!-- side-to-side slider script -->
+<script type="text/javascript">
+$(function(){
+    $( ".knob" ).draggable({ containment: "parent" });
+
+    $( ".targetLeft" ).droppable({
+        drop: function( event, ui ){
+            $( "#section-9" )
+                .addClass( "onLeft" )
+                .removeClass ( "onRight" )
+        }
+    });
+
+    $( ".targetRight" ).droppable({
+        drop: function( event, ui ){
+            $( "#section-9" )
+                .addClass( "onRight" )
+                .removeClass ( "onLeft" )
+        }
+    });
+});
+</script>
+
 
     </body>
 </html>
