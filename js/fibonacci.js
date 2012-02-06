@@ -59,3 +59,31 @@ $(document).ready(function() {
             placeholder: 'tmpPlaceholder',
         });
 });
+
+
+
+
+
+
+<!-- side-to-side slider script -->
+<script type="text/javascript">
+$(function(){
+    $( ".knob" ).draggable({ containment: "parent" });
+
+    $( ".targetLeft" ).droppable({
+        drop: function( event, ui ){
+            $( "#section-9" )
+                .addClass( "onLeft" )
+                .removeClass ( "onRight" )
+        }
+    });
+
+    $( ".targetRight" ).droppable({
+        drop: function( event, ui ){
+            $( "#section-9" )
+                .addClass( "onRight" )
+                .removeClass ( "onLeft" )
+        }
+    });
+});
+</script>

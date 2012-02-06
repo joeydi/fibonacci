@@ -195,6 +195,7 @@ li.tmpPlaceholder {
     height: 340px; /* height of largest */
     width:  550px; /* next fibonacci number :) */
 
+    background: url('images/stripe.png') repeat;
     border: 1px solid #9fccea;
     color: #465966;
         -webkit-border-radius: 2px;
@@ -213,6 +214,7 @@ li.tmpPlaceholder {
     border-radius: 2px;
         -webkit-box-shadow: 1px 1px 15px 3px rgba(100, 102, 102, 1);
         -moz-box-shadow: 1px 1px 15px 3px rgba(100, 102, 102, 1);
+    cursor: default;
     display: block;
     float: left;
     margin: 0;
@@ -253,6 +255,58 @@ li.tmpPlaceholder {
 #goldenRectangle > ul#justSomeHTML > li#section-3 {height: 18px; padding: 0; width: 18px;}
 #goldenRectangle > ul#justSomeHTML > li#section-2 {height: 8px; padding: 0; width: 8px;}
 #goldenRectangle > ul#justSomeHTML > li#section-1 {height: 8px; padding: 0; width: 8px;}
+
+
+
+/* left 'n right slider controls. */
+
+.slider {
+    background: #e1e4e6;
+    border: 1px solid #9fccea;
+    border-radius: .5em;
+    cursor: default;
+    float: right;
+    height: .8em;
+    padding: .1em;
+    position: relative;
+    width: 2.3em;
+}
+
+.knob {
+    background: #9fccea;
+    border: 1px solid #e1e4e6;
+    border-radius: .5em;
+    cursor: pointer;
+    float: left;
+    height: .7em;
+    width: .7em;
+    z-index: 50;
+}
+
+
+.targetLeft {
+ /*   background-color: red; */
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+}
+
+.targetRight {
+/*    background-color: blue; */
+    height: 100%;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+#goldenRectangle .slider, #goldenRectangle .knob {
+    display: none;
+}
 
 
 
