@@ -45,6 +45,10 @@ body {
     width: 100%;
 }
 
+#footer #date {
+    float: right;
+}
+
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
@@ -158,6 +162,7 @@ a:hover, a:active {
 /* in a list */
 
 #justSomeHTML li {
+    border: 1px solid #E1E4E6;
     border-bottom: 1px dashed #9fccea;
     border-radius: 2px;
     -moz-border-radius: 2px;
